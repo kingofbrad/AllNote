@@ -11,9 +11,12 @@
 		FA60C9DF2989C914007866C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60C9DE2989C914007866C0 /* ContentView.swift */; };
 		FA60C9E12989C915007866C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA60C9E02989C915007866C0 /* Assets.xcassets */; };
 		FA60C9E42989C915007866C0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA60C9E32989C915007866C0 /* Preview Assets.xcassets */; };
-		FA60C9EE2989C915007866C0 /* AllNoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60C9ED2989C915007866C0 /* AllNoteTests.swift */; };
-		FA60C9F82989C915007866C0 /* AllNoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60C9F72989C915007866C0 /* AllNoteUITests.swift */; };
-		FA60C9FA2989C915007866C0 /* AllNoteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60C9F92989C915007866C0 /* AllNoteUITestsLaunchTests.swift */; };
+		FA60CA0A2989CC65007866C0 /* NoteBookMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60CA092989CC65007866C0 /* NoteBookMainView.swift */; };
+		FA60CA102989D14A007866C0 /* NoteCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60CA0F2989D14A007866C0 /* NoteCellView.swift */; };
+		FA60CA132989D2C5007866C0 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = FA60CA122989D2C5007866C0 /* SQLite */; };
+		FA60CA162989D32B007866C0 /* DB_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60CA152989D32B007866C0 /* DB_Manager.swift */; };
+		FA60CA182989DDD0007866C0 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60CA172989DDD0007866C0 /* UserModel.swift */; };
+		FA60CA1A298BEF09007866C0 /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60CA19298BEF09007866C0 /* UsersView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +43,12 @@
 		FA60C9E02989C915007866C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA60C9E32989C915007866C0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FA60C9E92989C915007866C0 /* AllNoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AllNoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA60C9ED2989C915007866C0 /* AllNoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNoteTests.swift; sourceTree = "<group>"; };
 		FA60C9F32989C915007866C0 /* AllNoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AllNoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA60C9F72989C915007866C0 /* AllNoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNoteUITests.swift; sourceTree = "<group>"; };
-		FA60C9F92989C915007866C0 /* AllNoteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNoteUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FA60CA092989CC65007866C0 /* NoteBookMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteBookMainView.swift; sourceTree = "<group>"; };
+		FA60CA0F2989D14A007866C0 /* NoteCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCellView.swift; sourceTree = "<group>"; };
+		FA60CA152989D32B007866C0 /* DB_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB_Manager.swift; sourceTree = "<group>"; };
+		FA60CA172989DDD0007866C0 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		FA60CA19298BEF09007866C0 /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA60CA132989D2C5007866C0 /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,8 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				FA60C9DB2989C914007866C0 /* AllNote */,
-				FA60C9EC2989C915007866C0 /* AllNoteTests */,
-				FA60C9F62989C915007866C0 /* AllNoteUITests */,
 				FA60C9DA2989C914007866C0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,10 +98,15 @@
 		FA60C9DB2989C914007866C0 /* AllNote */ = {
 			isa = PBXGroup;
 			children = (
+				FA60CA142989D319007866C0 /* Controllers */,
+				FA60CA082989CC4F007866C0 /* Components */,
+				FA60CA072989CC42007866C0 /* ViewModels */,
+				FA60CA062989CC3D007866C0 /* Views */,
 				FA60C9DC2989C914007866C0 /* AllNoteApp.swift */,
 				FA60C9DE2989C914007866C0 /* ContentView.swift */,
 				FA60C9E02989C915007866C0 /* Assets.xcassets */,
 				FA60C9E22989C915007866C0 /* Preview Content */,
+				FA60CA19298BEF09007866C0 /* UsersView.swift */,
 			);
 			path = AllNote;
 			sourceTree = "<group>";
@@ -110,21 +119,68 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		FA60C9EC2989C915007866C0 /* AllNoteTests */ = {
+		FA60CA062989CC3D007866C0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FA60C9ED2989C915007866C0 /* AllNoteTests.swift */,
+				FA60CA0E2989CC88007866C0 /* Calender */,
+				FA60CA0D2989CC80007866C0 /* Profile */,
+				FA60CA0C2989CC7A007866C0 /* Reminders */,
+				FA60CA0B2989CC69007866C0 /* NoteBook */,
 			);
-			path = AllNoteTests;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		FA60C9F62989C915007866C0 /* AllNoteUITests */ = {
+		FA60CA072989CC42007866C0 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				FA60C9F72989C915007866C0 /* AllNoteUITests.swift */,
-				FA60C9F92989C915007866C0 /* AllNoteUITestsLaunchTests.swift */,
 			);
-			path = AllNoteUITests;
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		FA60CA082989CC4F007866C0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FA60CA0B2989CC69007866C0 /* NoteBook */ = {
+			isa = PBXGroup;
+			children = (
+				FA60CA092989CC65007866C0 /* NoteBookMainView.swift */,
+				FA60CA0F2989D14A007866C0 /* NoteCellView.swift */,
+			);
+			path = NoteBook;
+			sourceTree = "<group>";
+		};
+		FA60CA0C2989CC7A007866C0 /* Reminders */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Reminders;
+			sourceTree = "<group>";
+		};
+		FA60CA0D2989CC80007866C0 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		FA60CA0E2989CC88007866C0 /* Calender */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Calender;
+			sourceTree = "<group>";
+		};
+		FA60CA142989D319007866C0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA60CA152989D32B007866C0 /* DB_Manager.swift */,
+				FA60CA172989DDD0007866C0 /* UserModel.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +199,9 @@
 			dependencies = (
 			);
 			name = AllNote;
+			packageProductDependencies = (
+				FA60CA122989D2C5007866C0 /* SQLite */,
+			);
 			productName = AllNote;
 			productReference = FA60C9D92989C914007866C0 /* AllNote.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +274,9 @@
 				Base,
 			);
 			mainGroup = FA60C9D02989C914007866C0;
+			packageReferences = (
+				FA60CA112989D2C5007866C0 /* XCRemoteSwiftPackageReference "SQLite.swift" */,
+			);
 			productRefGroup = FA60C9DA2989C914007866C0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,7 +319,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA60CA0A2989CC65007866C0 /* NoteBookMainView.swift in Sources */,
+				FA60CA162989D32B007866C0 /* DB_Manager.swift in Sources */,
 				FA60C9DF2989C914007866C0 /* ContentView.swift in Sources */,
+				FA60CA102989D14A007866C0 /* NoteCellView.swift in Sources */,
+				FA60CA182989DDD0007866C0 /* UserModel.swift in Sources */,
+				FA60CA1A298BEF09007866C0 /* UsersView.swift in Sources */,
 				FA60C9DD2989C914007866C0 /* AllNoteApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,7 +333,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA60C9EE2989C915007866C0 /* AllNoteTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,8 +340,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA60C9FA2989C915007866C0 /* AllNoteUITestsLaunchTests.swift in Sources */,
-				FA60C9F82989C915007866C0 /* AllNoteUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +647,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA60CA112989D2C5007866C0 /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.14.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA60CA122989D2C5007866C0 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA60CA112989D2C5007866C0 /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FA60C9D12989C914007866C0 /* Project object */;
 }
